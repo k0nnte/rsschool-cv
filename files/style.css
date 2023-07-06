@@ -1,17 +1,17 @@
-
+/* Указываем box sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-
+/* Убираем внутренние отступы */
 ul[class],
 ol[class] {
   padding: 0;
 }
 
-
+/* Убираем внешние отступы */
 body,
 h1,
 h2,
@@ -29,7 +29,7 @@ dd {
   margin: 0;
 }
 
-
+/* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -37,29 +37,29 @@ body {
   line-height: 1.5;
 }
 
-
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
   list-style: none;
 }
 
-
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-
+/* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
   display: block;
 }
 
-
+/* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
   margin-top: 1em;
 }
 
-
+/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
@@ -67,7 +67,7 @@ select {
   font: inherit;
 }
 
-
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -86,4 +86,226 @@ a {
   position: relative;
 }
 
-/*Сброс стилей */
+/* сброс стилей */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4d2323;
+}
+
+.header {
+  background-color: #829985;
+  height: 86px;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
+}
+
+.nav_ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 18px;
+}
+
+.nav_item {
+  margin-left: 1em;
+}
+
+.nav_item_link {
+  color: white;
+  font-size: 20px;
+}
+
+.zagolovok {
+  color: #4d2323;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  line-height: 50px;
+  word-spacing: 3px;
+}
+
+.name {
+  display: flex;
+  margin: 40px;
+  justify-content: space-around;
+  border-bottom: 12px solid #829985;
+}
+
+.name_icon {
+  position: relative;
+}
+
+.icon_img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name_info {
+  padding: 5em;
+}
+
+.wrap {
+  padding: 0px 60px 0px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.secSizes {
+  width: calc(50% - 40px);
+  padding-bottom: 20px;
+  height: 300px;
+}
+
+.contact {
+  border-bottom: 4px solid #aecfd1;
+}
+
+.about {
+  border-bottom: 4px solid #aecfd1;
+}
+
+.sag_2 {
+  margin-bottom: 40px;
+}
+
+.skills {
+  margin-top: 40px;
+}
+
+.code {
+  margin-top: 40px;
+}
+
+.curse {
+  margin-top: 40px;
+}
+
+.languages {
+  margin-top: 40px;
+  margin-left: 40%;
+  position: relative;
+}
+
+.languages::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 211.5%;
+  height: 4px;
+  background-color: #aecfd1;
+  /* left: -580px; */
+  right: -186px;
+  top: -44px;
+}
+
+.footer {
+  height: 90px;
+  background-color: #829985;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px 0px 80px;
+}
+
+.foot_img {
+  height: 40px;
+  object-fit: cover;
+}
+
+.autor {
+  width: 115px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a:hover,
+a:target,
+a:focus {
+  color: red;
+}
+
+.contact_list {
+  position: relative;
+  padding-left: 20px;
+}
+
+.contact_phone::before {
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/files/images/phone.png");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contact_email::before {
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/files/images/mail.png");
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contact_git::before {
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/files/images/git.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contact_teleg::before {
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/files/images/teleg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.skills_list {
+  padding-left: 20px;
+  position: relative;
+}
+
+.skills_point::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  content: "";
+  background-image: url("/files/images/point.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: -15px;
+  top: 3px;
+}
