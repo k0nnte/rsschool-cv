@@ -148,6 +148,21 @@ body {
   position: relative;
 }
 
+.dark {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.icon_img:hover ~ .dark {
+  display: block;
+}
+
 .icon_img {
   width: 200px;
   height: 200px;
@@ -234,10 +249,25 @@ body {
   justify-content: space-between;
 }
 
-a:hover,
-a:target,
-a:focus {
+a:hover:not(.nav_item_link),
+a:target:not(.nav_item_link),
+a:focus:not(.nav_item_link) {
   color: red;
+}
+
+.nav_item_link:after {
+  display: block;
+
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  content: "";
+  transition: width 0.6s ease-out;
+}
+
+.nav_item_link:hover::after {
+  width: 100%;
 }
 
 .contact_list {
