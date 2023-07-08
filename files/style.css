@@ -1,0 +1,329 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+/* сброс стилей */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4d2323;
+}
+
+.header {
+  background-color: #829985;
+  height: 86px;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
+}
+
+.nav_ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 18px;
+}
+
+.nav_item {
+  margin-left: 1em;
+}
+
+.nav_item_link {
+  color: white;
+  font-size: 20px;
+}
+
+.zagolovok {
+  color: #4d2323;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  line-height: 50px;
+  word-spacing: 3px;
+}
+
+.name {
+  display: flex;
+  margin: 40px;
+  justify-content: space-around;
+  border-bottom: 12px solid #829985;
+}
+
+.name_icon {
+  position: relative;
+}
+
+.dark {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.icon_img:hover ~ .dark {
+  display: block;
+}
+
+.icon_img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name_info {
+  padding: 5em;
+}
+
+.wrap {
+  padding: 0px 60px 0px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.secSizes {
+  width: calc(50% - 40px);
+  padding-bottom: 20px;
+  height: 300px;
+}
+
+.contact {
+  border-bottom: 4px solid #aecfd1;
+}
+
+.about {
+  border-bottom: 4px solid #aecfd1;
+}
+
+.sag_2 {
+  margin-bottom: 40px;
+}
+
+.skills {
+  margin-top: 40px;
+}
+
+.code {
+  margin-top: 40px;
+}
+
+.curse {
+  margin-top: 40px;
+}
+
+.languages {
+  margin-top: 40px;
+  margin-left: 40%;
+  position: relative;
+}
+
+.languages::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 211.5%;
+  height: 4px;
+  background-color: #aecfd1;
+  /* left: -580px; */
+  right: -186px;
+  top: -44px;
+}
+
+.footer {
+  height: 90px;
+  background-color: #829985;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px 0px 80px;
+}
+
+.foot_img {
+  height: 40px;
+  object-fit: cover;
+}
+
+.autor {
+  width: 115px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a:hover:not(.nav_item_link),
+a:target:not(.nav_item_link),
+a:focus:not(.nav_item_link) {
+  color: red;
+}
+
+.nav_item_link:after {
+  display: block;
+
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  content: "";
+  transition: width 0.6s ease-out;
+}
+
+.nav_item_link:hover::after {
+  width: 100%;
+}
+
+.contact_list {
+  position: relative;
+  padding-left: 20px;
+}
+
+.contact_phone::before {
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/files/images/phone.png");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contact_email::before {
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/files/images/mail.png");
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contact_git::before {
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/files/images/git.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contact_teleg::before {
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/files/images/teleg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.skills_list {
+  padding-left: 20px;
+  position: relative;
+}
+
+.skills_point::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  content: "";
+  background-image: url("/files/images/point.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: -15px;
+  top: 3px;
+}
